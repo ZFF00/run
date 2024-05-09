@@ -8,19 +8,21 @@
 2. 若不指定-f参数，则默认标识为当前时间
 3. 若不指定-s和-p参数，则使用程序内部提供的邮箱
 
-# 增加配置以更加方便使用
+# 下载并增加配置以方便使用
 ```shell
-# 1. 将run文件放在~/bin目录下
+# 1. 下载
+git clone git@github.com:ZFF00/run.git
+# 2. 将run文件放在~/bin目录下
 mkdir ~/bin
-mv run ~/bin
+cp ./run/run ~/bin
 chmod +x ~/bin/run
-# 2. 将~/bin目录添加到环境变量中
+# 3. 将~/bin目录添加到环境变量中
 echo 'export PATH=$PATH:~/bin' >> ~/.bashrc
-# 3. 自定义命令以更简洁地使用, 添加收件人邮箱地址, 假设为123456789@qq.com
+# 4. 自定义命令以更简洁地使用, 添加收件人邮箱地址, 假设为123456789@qq.com
 echo 'alias run="run --receiver_mail 123456789@qq.com "' >> ~/.bashrc
-# 4. 激活配置, 只需执行一次
+# 5. 激活配置, 只需执行一次
 source ~/.bashrc
-# 4. 使用测试，运行ls命令, 当运行任务时间较长时推荐在后台运行
+# 6. 使用测试，运行ls命令, 当运行任务时间较长时推荐在后台运行
 run -f 测试任务 -c ls
 ```
 
