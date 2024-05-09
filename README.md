@@ -28,16 +28,16 @@ run -f 测试任务 -c ls
 
 # 用法
 ```shell
-usage: run_program.py [-h] [-f FLAG [FLAG ...]] [-c COMMAND [COMMAND ...]] [-s SENDER_MAIL] [-p PWD] [-r RECEIVER_MAIL]
+usage: run [-h] [-f FLAG [FLAG ...]] -c COMMAND [COMMAND ...] [-s SENDER_MAIL] [-p PWD] -r RECEIVER_MAIL
 
-运行linux程序, 并将成功或失败信息发送到邮箱
+运行指定的任务, 并将成功或失败信息发送到邮箱
 
 options:
   -h, --help            show this help message and exit
   -f FLAG [FLAG ...], --flag FLAG [FLAG ...]
                         此次任务的标识
   -c COMMAND [COMMAND ...], --command COMMAND [COMMAND ...]
-                        要运行的命令, 空格隔开
+                        要运行的命令, 空格隔开, 若命令中有“-”，请用引号将整个命令括起来
   -s SENDER_MAIL, --sender_mail SENDER_MAIL
                         发信人邮箱
   -p PWD, --pwd PWD     发信人邮箱授权码
