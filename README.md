@@ -25,6 +25,7 @@ run -f 测试任务 -c ls
 ```
 
 # 用法
+```shell
 usage: run_program.py [-h] [-f FLAG [FLAG ...]] [-c COMMAND [COMMAND ...]] [-s SENDER_MAIL] [-p PWD] [-r RECEIVER_MAIL]
 
 运行linux程序, 并将成功或失败信息发送到邮箱
@@ -40,3 +41,4 @@ options:
   -p PWD, --pwd PWD     发信人邮箱授权码
   -r RECEIVER_MAIL, --receiver_mail RECEIVER_MAIL
                         收信人邮箱
+```
